@@ -67,8 +67,8 @@ class BSNode:
 		self.right = None
 		self.dupes = 0
 
-	def isValid(self, leftm=None, rightm=None):
-		if not leftm:
+	def isValid(self, leftm=None, rightm=None):  #currently returning too soon.
+		if not leftm:                        #if we recurse left, still want to recurse right
 			leftm = self.val - 1
 
 		if not rightm:
